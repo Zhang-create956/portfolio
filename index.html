@@ -72,6 +72,13 @@
 
       .hero, section:not(.hero), .footer { padding-left: clamp(250px, 18vw, 300px); }
     }
+  </style>  <style id="education-experience-style">
+    @media (min-width: 761px) { .hero .avatar { right: 20%; }.hero .signal { right: -45px; } }
+    .experience-group + .experience-group { margin-top: 52px; }
+    .experience-group-label { margin: 0 0 14px; color: var(--cyan); font-size: 10px; }
+    .education-grid .experience-card { min-height: 235px; }
+    .education-grid .experience-role { margin-top: 34px; }
+    @media (max-width: 760px) { .experience-group + .experience-group { margin-top: 40px; }.education-grid .experience-card { min-height: 230px; } }
   </style></head><body>
   <div class="grain"></div>
   <button class="edit mono" id="editToggle" aria-label="编辑页面">EDIT</button><button class="edit export mono" id="exportPage" aria-label="导出页面">EXPORT</button>
@@ -104,27 +111,25 @@
     </section>
     <div class="ticker" aria-hidden="true"><div class="ticker-inner">AI-NATIVE PRODUCT THINKING <b>✦</b> USER INSIGHT TO OPERATION <b>✦</b> EVIDENCE · WORKFLOW · GROWTH <b>✦</b> AI-NATIVE PRODUCT THINKING <b>✦</b> USER INSIGHT TO OPERATION <b>✦</b> EVIDENCE · WORKFLOW · GROWTH <b>✦</b></div></div>
 
-    <section class="profile reveal">
-      <div class="section-in profile-grid">
-        <p class="profile-word" aria-hidden="true">ABOUT</p>
-        <div>
-          <p class="eyebrow mono">PERSONA / 01</p>
-          <p class="profile-copy" data-editable="true" data-edit-id="about-bio">我是张卓，一名面向 <strong>AI 产品运营</strong> 的实践者。我相信好的产品不是堆叠功能，而是从用户、场景与业务约束中找出可行动的问题，再用数据与内容让它持续运转。</p>
-          <div class="tag-row"><span class="tag">用户洞察</span><span class="tag">产品策划</span><span class="tag">AI 工作流</span><span class="tag">内容与增长</span><span class="tag">跨团队协同</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience">
+<section id="experience">
       <div class="section-in">
-        <div class="section-head experience-section-head reveal"><div><p class="section-num mono">01 / EXPERIENCE</p><h2 class="experience-section-title" data-editable="true" data-edit-id="experience-title">实习经历</h2></div><p class="section-note">从内容、投放、商品到用户反馈，把复杂链路整理成可追踪、可协作的动作。</p></div>
-        <div class="experience-grid reveal" aria-label="实习经历">
+        <div class="section-head experience-section-head reveal"><div><p class="section-num mono">01 / EXPERIENCE</p><h2 class="experience-section-title" data-editable="true" data-edit-id="experience-title">教育与实习经历</h2></div><p class="section-note">两段实习经历覆盖跨境电商与海外娱乐社交产品运营，围绕用户、内容、活动、数据与履约等模块积累实践。</p></div>
+        <div class="experience-group reveal" aria-label="教育背景">
+          <p class="experience-group-label mono">EDUCATION / 01</p>
+          <div class="experience-grid education-grid">
+            <button class="experience-card" type="button" data-experience="szu" aria-haspopup="dialog"><span class="experience-meta mono"><span class="experience-date">2024.09 — 至今</span><span class="experience-tag">硕士研究生 · 3年制</span></span><div class="experience-role"><h3>深圳大学</h3><p class="experience-position">建筑专硕（3年制）研究生</p></div><span class="experience-open mono"><span>查看教育与校园经历</span><span>↗</span></span></button>
+            <button class="experience-card" type="button" data-experience="wust" aria-haspopup="dialog"><span class="experience-meta mono"><span class="experience-date">2019.09 — 2024.06</span><span class="experience-tag">本科 · 5年制</span></span><div class="experience-role"><h3>武汉科技大学</h3><p class="experience-position">建筑学（5年制）本科</p></div><span class="experience-open mono"><span>查看教育与校园经历</span><span>↗</span></span></button>
+          </div>
+        </div>
+        <div class="experience-group reveal" aria-label="实习经历">
+          <p class="experience-group-label mono">INTERNSHIPS / 02</p>
+          <div class="experience-grid" aria-label="实习经历">
           <button class="experience-card" type="button" data-experience="etsy" aria-haspopup="dialog"><span class="experience-meta mono"><span class="experience-date">2026.03 — 2026.08</span><span class="experience-tag">跨境电商 · Etsy 店铺运营</span></span><div class="experience-role"><h3>同风科技</h3><p class="experience-position">Etsy运营助理（实习）</p></div><span class="experience-open mono"><span>查看工作内容与成果</span><span>↗</span></span></button>
           <button class="experience-card" type="button" data-experience="youstar" aria-haspopup="dialog"><span class="experience-meta mono"><span class="experience-date">2025.08 — 2025.11</span><span class="experience-tag">海外娱乐社交产品 · 用户增长</span></span><div class="experience-role"><h3>深圳趣虹科技有限公司</h3><p class="experience-position">海外产品运营实习生（You Star）</p></div><span class="experience-open mono"><span>查看工作内容与成果</span><span>↗</span></span></button>
         </div>
+        </div>
       </div>
     </section>
-
     <section id="works">
       <div class="section-in">
         <div class="section-head reveal"><div><p class="section-num mono">02 / PRODUCT EXPERIMENTS</p><h2 class="section-title">从洞察到 MVP，<br>让需求有回路。</h2></div><p class="section-note">以下为研究、策划与原型方向；它们强调验证路径，而非替用户承诺未经确认的服务结果。</p></div>
@@ -160,7 +165,7 @@
     <div class="modal" id="experienceModal" aria-hidden="true">
       <div class="modal-shade" data-modal-close="true"></div>
       <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-        <button class="modal-close" type="button" data-modal-close="true" aria-label="关闭实习详情">×</button>
+        <button class="modal-close" type="button" data-modal-close="true" aria-label="关闭详情">×</button>
         <p class="modal-kicker mono" id="modalKicker"></p><h3 id="modalTitle"></h3><p class="modal-intro" id="modalIntro"></p>
         <div class="modal-stat-grid" id="modalStats"></div><ul class="modal-list" id="modalList"></ul>
       </section>
@@ -176,7 +181,10 @@
       let edits={};try{edits=JSON.parse(localStorage.getItem(key)||'{}')}catch(e){}fields.forEach(el=>{const value=edits[el.dataset.editId];if(typeof value==='string')el.innerHTML=value});
       const saveEdits=()=>{const next={};fields.forEach(el=>next[el.dataset.editId]=el.innerHTML);localStorage.setItem(key,JSON.stringify(next))};
       const edit=()=>{const on=!toggle.classList.contains('on');toggle.classList.toggle('on',on);toggle.textContent=on?'SAVE':'EDIT';fields.forEach(el=>el.contentEditable=on?'true':'false');if(!on)saveEdits()};
-      exportPage.onclick=()=>{saveEdits();const clone=document.documentElement.cloneNode(true);clone.dataset.editVersion=version;clone.querySelectorAll('[data-edit-id]').forEach(el=>el.contentEditable='false');clone.querySelectorAll('.edit').forEach(el=>el.remove());const blob=new Blob(['<!doctype html>\n'+clone.outerHTML],{type:'text/html'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='zhang-zhuo-ai-homepage-v2.html';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500)};toggle.onclick=edit;addEventListener('keydown',e=>{if(e.key.toLowerCase()==='e'&&!/input|textarea/i.test(document.activeElement.tagName))edit();if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){e.preventDefault();saveEdits();toggle.classList.remove('on');toggle.textContent='EDIT';fields.forEach(el=>el.contentEditable='false')}});      const experienceData={etsy:{kicker:'2026.03 — 2026.08 · TONGFENG TECHNOLOGY',title:'同风科技 / Etsy 运营',intro:'围绕跨境商品运营协同 Listing、内容、广告与履约节奏；通过持续复盘，寻找可执行的增长改进点。',stats:[['570.2K','广告曝光'],['13.5K','广告点击'],['4.47','ROAS']],list:['参与商品 Listing 优化与内容表达，围绕搜索、转化和商品信息持续迭代。','跟进广告投放与归因复盘：累计 1,528 笔广告订单、约 $44.5K 归因收入。','协同商品、内容、广告和履约链路；期间累计跟进 3,132 笔订单，销售额 £61,333.29。']},youstar:{kicker:'2025.08 — 2025.11 · QUHONG TECHNOLOGY',title:'趣虹科技 / 海外产品运营',intro:'聚焦海外社交与语音产品的研究和运营支持，把零散的行业观察、功能机制与业务规则整理为团队可复用的判断材料。',stats:[['40–50','月度深度分析'],['海外','产品研究范围'],['SOP','流程沉淀']],list:['持续拆解海外社交、语音与社群产品，形成竞品功能、内容机制与用户体验分析。','围绕平台虚拟经济与运营规则完成资料梳理，为产品与运营协作提供结构化输入。','沉淀可复用的调研报告与执行 SOP，提升后续分析和交接效率。']}};
+      exportPage.onclick=()=>{saveEdits();const clone=document.documentElement.cloneNode(true);clone.dataset.editVersion=version;clone.querySelectorAll('[data-edit-id]').forEach(el=>el.contentEditable='false');clone.querySelectorAll('.edit').forEach(el=>el.remove());const blob=new Blob(['<!doctype html>\n'+clone.outerHTML],{type:'text/html'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='zhang-zhuo-ai-homepage-v2.html';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500)};toggle.onclick=edit;addEventListener('keydown',e=>{if(e.key.toLowerCase()==='e'&&!/input|textarea/i.test(document.activeElement.tagName))edit();if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){e.preventDefault();saveEdits();toggle.classList.remove('on');toggle.textContent='EDIT';fields.forEach(el=>el.contentEditable='false')}});      const experienceData={
+        szu:{kicker:'2024.09 — 至今 · SHENZHEN UNIVERSITY',title:'深圳大学 / 建筑专硕',intro:'建筑专硕（3年制）研究生。',stats:[['3.6 / 4.0','GPA'],['前 10%','专业排名'],['一等奖','研究生奖学金']],list:['主修课程：建筑设计（91分）、环境与行为研究专题（85分）等。','学业成果：GPA 3.6/4.0，专业排名前10%，荣获研究生一等奖学金。','校园工作：担任研究生第三党支部副书记，统筹支部党员发展、党会组织等核心工作，规范支部标准化工作流程，有效提升支部组织生活开展效率。','高效协调支部内外部资源，落地各项党建工作任务，扎实锻炼统筹规划、组织管理与跨场景沟通协调能力。']},
+        wust:{kicker:'2019.09 — 2024.06 · WUHAN UNIVERSITY OF SCIENCE AND TECHNOLOGY',title:'武汉科技大学 / 建筑学本科',intro:'建筑学（5年制）本科。',stats:[['3.6 / 4.0','GPA'],['前 10%','专业排名'],['80+ 人','主题活动规模']],list:['学业成果：GPA 3.6/4.0，在校五年持续稳居专业前10%，历年均斩获校级一、二等奖学金，顺利通过大学英语四六级考试。','校园工作：任职建筑模型协会会长，牵头策划落地80+人规模手工建模主题活动，负责12+场线下专业活动的全流程统筹。','活动覆盖资源对接、成本管控、财务报账、活动落地等核心工作。','在提升协会成员专业实践能力的同时，积累了活动策划、团队管理与成本把控经验。']},
+        etsy:{kicker:'2026.03 — 2026.08 · TONGFENG TECHNOLOGY',title:'同风科技 / Etsy 运营',intro:'从订单履约与客服开始，逐步负责商品前端、上新、广告及周度数据复盘，完成从店铺执行到运营优化的完整闭环。',stats:[['570.2K','广告曝光'],['13.5K','广告点击'],['1,528','广告订单'],['US$44.5K','广告归因收入'],['4.47','ROAS'],['3,132','维护期订单'],['4.9','平均评分'],['0%','Case rate']],list:['首月系统熟悉产品、材质尺寸、定制规则及生产交付流程，独立完成订单审核、定制确认、制单、生产对接、物流跟踪和售后；整理客服 FAQ、标准回复及制单检查清单。','第2—3个月接手店铺前端运营，优化 Listing 标题、Tags、主副图、视频、定制说明、商品选项、价格及物流信息；针对曝光、点击、转化与误选问题，迭代主图、场景图、选项结构与交期说明。','参与新品从市场调研、竞品分析、产品定位、视觉素材制作、链接上架到数据复盘的完整流程；结合搜索词、访问量、收藏量、订单量和销售额判断产品潜力，开发礼赠、儿童用品及宠物情感定制等场景化产品。','参与 Etsy 广告和促销运营，按新品、潜力款、主力款和低效款进行广告分层；跟踪曝光、点击率、CPC、订单、广告收入及 ROAS，关闭高花费低产出投放，并测试收藏优惠、加购挽回和老客优惠。','建立周度数据复盘机制，综合分析 Visits、Orders、Conversion Rate、客单价、广告订单占比及自然订单表现；根据客服咨询、差评和售后记录优化购买说明、定制确认及异常订单处理。','六个月成长逻辑：第1个月熟悉产品、定制制单、客服和售后；第2个月维护 Listing、整理搜索词和客户问题；第3个月上新、制作场景图、测试主图和选项；第4个月接手广告预算和低效链接优化；第5个月优化价格、运费、优惠和购买流程；第6个月独立复盘前端运营并协同履约。']},youstar:{kicker:'2025.08 — 2025.11 · QUHONG TECHNOLOGY',title:'深圳趣虹科技 / 海外产品运营',intro:'负责海外娱乐社交产品的用户运营、活动策划、生态维护及增长策略落地，聚焦用户活跃、留存与付费转化，并通过数据复盘与资源投放研判优化运营体系。',stats:[['40—50 款','月度竞品深度拆解'],['万字+','图文调研报告'],['SOP','流程体系沉淀']],list:['竞品与用户调研：每月完成40—50款海外社交、语音互动、娱乐社区类产品的深度拆解，输出万字以上图文调研报告，提炼行业玩法、用户偏好与产品亮点，为内部产品优化和运营迭代提供依据。','数据与策略支撑：协助搭建平台钻石流水、礼物价值专项台账，按月梳理活动奖励、礼物收支、用户消费等核心数据，为运营策略调整和资源投放优化提供数据支撑。','产品协同优化：整合竞品优势、用户反馈及运营数据，输出可落地的活动策划、资源配置、用户体验优化建议；相关报告获部门认可，并应用于后续项目方案研讨与迭代。','流程体系沉淀：参与实习工作 SOP 的梳理与优化，规范资源运营、数据统计、奖励发放等核心流程节点，减少跨团队重复沟通与人工疏漏，提升团队协作效率与工作标准化程度。']}};
       const modal=document.getElementById('experienceModal'),modalKicker=document.getElementById('modalKicker'),modalTitle=document.getElementById('modalTitle'),modalIntro=document.getElementById('modalIntro'),modalStats=document.getElementById('modalStats'),modalList=document.getElementById('modalList');
       const closeExperience=()=>{modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=''};const openExperience=id=>{const item=experienceData[id];if(!item)return;modalKicker.textContent=item.kicker;modalTitle.textContent=item.title;modalIntro.textContent=item.intro;modalStats.innerHTML=item.stats.map(stat=>`<div class="modal-stat"><b>${stat[0]}</b><span>${stat[1]}</span></div>`).join('');modalList.innerHTML=item.list.map(line=>`<li>${line}</li>`).join('');modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';modal.querySelector('.modal-close').focus()};document.querySelectorAll('[data-experience]').forEach(card=>card.addEventListener('click',()=>openExperience(card.dataset.experience)));modal.addEventListener('click',event=>{if(event.target.closest('[data-modal-close]'))closeExperience()});addEventListener('keydown',event=>{if(event.key==='Escape'&&modal.classList.contains('open'))closeExperience()});      const c=document.getElementById('neural'),ctx=c.getContext('2d');let w,h,dots=[],mouse={x:-999,y:-999};const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
       function resize(){w=c.width=innerWidth*devicePixelRatio;h=c.height=innerHeight*devicePixelRatio;ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);dots=Array.from({length:innerWidth<700?38:82},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.24,vy:(Math.random()-.5)*.24,r:Math.random()*1.6+.35}))} resize();addEventListener('resize',resize);addEventListener('pointermove',e=>{mouse.x=e.clientX;mouse.y=e.clientY},{passive:true});
