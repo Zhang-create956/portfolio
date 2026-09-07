@@ -103,7 +103,7 @@
     }
   </style>  <style id="modal-balance-style">
     .modal-card {
-      width: min(860px, 100%);
+      width: min(1440px, 80vw);
       max-height: min(780px, calc(100svh - 40px));
       padding: clamp(26px, 3.1vw, 44px);
     }
@@ -118,7 +118,7 @@
     .modal-list li:before { top: 24px; }
 
     @media (max-width: 760px) {
-      .modal-card { padding: 32px 24px 24px; }
+      .modal-card { width: 100%; padding: 32px 24px 24px; }
       .modal-kicker { font-size: 11px; }
       .modal-card h3 { font-size: 30px; }
       .modal-stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
