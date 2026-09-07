@@ -70,7 +70,7 @@
       .nav.side-nav a em { font-style: normal; }
       .nav.side-nav a:hover, .nav.side-nav a:focus-visible { color: var(--white); padding-left: 6px; }
 
-      .hero, section:not(.hero), .footer { padding-left: clamp(250px, 18vw, 300px); }
+      .hero, main > section:not(.hero), .footer { padding-left: clamp(250px, 18vw, 300px); }
     }
   </style>  <style id="education-experience-style">
     @media (min-width: 761px) { .hero .avatar { right: 20%; }.hero .signal { right: -45px; } }
@@ -100,6 +100,31 @@
       .experience-card h3 { font-size: 28px; }
       .education-grid .experience-card { min-height: 238px; padding-right: 120px; }
       .school-emblem { top: 62px; right: 18px; width: 78px; height: 78px; }
+    }
+  </style>  <style id="modal-balance-style">
+    .modal-card {
+      width: min(860px, 100%);
+      max-height: min(780px, calc(100svh - 40px));
+      padding: clamp(26px, 3.1vw, 44px);
+    }
+    .modal-kicker { margin-bottom: 14px; font-size: 12px; }
+    .modal-card h3 { font-size: clamp(28px, 2.4vw, 38px); line-height: 1.03; margin-bottom: 14px; }
+    .modal-intro { max-width: none; font-size: 14px; line-height: 1.75; }
+    .modal-stat-grid { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); margin: 24px 0; }
+    .modal-stat { min-height: 82px; padding: 14px; }
+    .modal-stat b { font-size: clamp(19px, 1.6vw, 24px); }
+    .modal-stat span { font-size: 11px; }
+    .modal-list li { padding: 14px 0 14px 20px; font-size: 14px; line-height: 1.75; }
+    .modal-list li:before { top: 24px; }
+
+    @media (max-width: 760px) {
+      .modal-card { padding: 32px 24px 24px; }
+      .modal-kicker { font-size: 11px; }
+      .modal-card h3 { font-size: 30px; }
+      .modal-stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .modal-stat { min-height: 74px; padding: 12px; }
+      .modal-stat b { font-size: 20px; }
+      .modal-list li { font-size: 13px; }
     }
   </style></head><body>
   <div class="grain"></div>
