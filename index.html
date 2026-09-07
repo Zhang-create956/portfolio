@@ -117,6 +117,10 @@
     .modal-list li { padding: 14px 0 14px 20px; font-size: 14px; line-height: 1.75; }
     .modal-list li:before { top: 24px; }
 
+    @media (min-width: 761px) {
+      .modal-card { min-height: min(720px, calc(100svh - 110px)); }
+    }
+
     @media (max-width: 760px) {
       .modal-card { width: 100%; padding: 32px 24px 24px; }
       .modal-kicker { font-size: 11px; }
