@@ -141,7 +141,26 @@
       .modal-stat b { font-size: 20px; }
       .modal-list li { font-size: 13px; }
     }
-  </style></head><body>
+  </style><style id="project-gallery-and-navigation-style">
+  @media (min-width: 761px) {
+    .nav.side-nav { font-size: 13px; letter-spacing: .11em; }
+    .nav.side-nav a { gap: 14px; padding: 0 8px; }
+    .nav.side-nav a span { font-size: 12px; font-weight: 800; }
+  }
+  #works .section-title { font-size: clamp(28px, 3vw, 40px); letter-spacing: -.05em; line-height: 1; }
+  #works .case { min-height: 380px; padding: 24px 28px; }
+  .case-link { cursor: pointer; }
+  .case-link:focus-visible { outline: 2px solid var(--cyan); outline-offset: 4px; }
+  .case-drawings { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; height: 72px; margin-top: 18px; }
+  .case-drawing { margin: 0; overflow: hidden; border: 1px solid rgba(114, 228, 255, .36); background: #0b1424; }
+  .case-drawing img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; filter: saturate(.82) contrast(1.04) brightness(.9); transition: transform .35s ease, filter .35s ease; }
+  .case:hover .case-drawing img { transform: scale(1.04); filter: saturate(1) contrast(1.03) brightness(1); }
+  @media (max-width: 760px) {
+    #works .section-title { font-size: 30px; }
+    #works .case { min-height: 350px; padding: 22px; }
+    .case-drawings { height: 64px; margin-top: 16px; }
+  }
+</style></head><body>
   <div class="grain"></div>
   <header class="topbar" id="topbar">
     <a class="mark" href="#top"><i></i><span>ZHANG ZHUO / AI OPS</span></a>
@@ -193,12 +212,12 @@
     </section>
     <section id="works">
       <div class="section-in">
-        <div class="section-head reveal"><div><p class="section-num mono">02 / PRODUCT EXPERIMENTS</p><h2 class="section-title">从洞察到 MVP，<br>让需求有回路。</h2></div><p class="section-note">以下为研究、策划与原型方向；它们强调验证路径，而非替用户承诺未经确认的服务结果。</p></div>
+        <div class="section-head reveal"><div><p class="section-num mono">02 / PRODUCT EXPERIMENTS</p><h2 class="section-title">项目经历</h2></div><p class="section-note">以下为研究、策划与原型方向；它们强调验证路径，而非替用户承诺未经确认的服务结果。</p></div>
         <div class="case-grid">
-          <article class="case reveal" style="--cover:url('assets/project-covers/heat-safe-atlas.png')"><span class="project-index">01 · HEATSAFE CITY</span><h3>城市高温<br>行动系统</h3><p>把“哪里需要降温、资源是否可用、路线会不会失效”拆为热风险地图、资源台账、路线引擎和行动看板，先服务一线协同，再沉淀居民端信息。</p><div class="case-footer"><div class="chips"><span class="chip">MVP 路线</span><span class="chip">证据边界</span><span class="chip">任务编排</span></div><span class="arrow">↗</span></div></article>
-          <article class="case reveal" style="--cover:url('assets/project-covers/yuanling-map.png')"><span class="project-index">02 · YUANLING CO-BUILD OS</span><h3>园岭共建<br>服务操作系统</h3><p>以一张服务地图、三类协作工具和一个运营后台，连接学生、居民、商家与团队。用“发现—诊断—轻试点—评估—公开复盘”让共建持续发生。</p><div class="case-footer"><div class="chips"><span class="chip">服务蓝图</span><span class="chip">任务流</span><span class="chip">运营指标</span></div><span class="arrow">↗</span></div></article>
-          <article class="case reveal" style="--cover:url('assets/project-covers/aipin-board.jpg')"><span class="project-index">03 · AIPIN COPILOT</span><h3>爱拼公寓<br>共创助手</h3><p>将访谈、现场资料与协作记录转成可追溯的证据卡片；通过人群—场景—任务—痛点结构，辅助方案对比、共创沟通和交付检查。</p><div class="case-footer"><div class="chips"><span class="chip">RAG + 规则</span><span class="chip">人工复核</span><span class="chip">可追溯性</span></div><span class="arrow">↗</span></div></article>
-          <article class="case reveal" style="--cover:url('assets/project-covers/yilaoju-board.jpg')"><span class="project-index">04 · YILAOJU</span><h3>怡老居<br>焕新管家</h3><p>围绕长者与家人的日常使用，规划“初始评估—共同决策—轻量调整—持续支持”的产品闭环；涉及专业判断的环节始终保留人工核验。</p><div class="case-footer"><div class="chips"><span class="chip">家庭共识</span><span class="chip">交付看板</span><span class="chip">使用指引</span></div><span class="arrow">↗</span></div></article>
+          <a class="case case-link reveal" href="https://zhang-create956.github.io/resume/" target="_blank" rel="noreferrer" aria-label="在新窗口打开城市高温行动系统项目" style="--cover:url('assets/project-covers/heat-safe-live-site.png')"><span class="project-index">01 · HEATSAFE CITY</span><h3>城市高温<br>行动系统</h3><p>把“哪里需要降温、资源是否可用、路线会不会失效”拆为热风险地图、资源台账、路线引擎和行动看板，先服务一线协同，再沉淀居民端信息。</p><div class="case-footer"><div class="chips"><span class="chip">MVP 路线</span><span class="chip">证据边界</span><span class="chip">任务编排</span></div><span class="arrow" aria-hidden="true">↗</span></div></a>
+          <article class="case reveal" style="--cover:url('assets/project-covers/yuanling-map.png')"><span class="project-index">02 · YUANLING CO-BUILD OS</span><h3>园岭共建<br>服务操作系统</h3><p>以一张服务地图、三类协作工具和一个运营后台，连接学生、居民、商家与团队。用“发现—诊断—轻试点—评估—公开复盘”让共建持续发生。</p><div class="case-drawings" aria-label="园岭项目图纸"><figure class="case-drawing"><img src="assets/project-drawings/yuanling-community-map.jpg" alt="园岭社区服务地图" loading="lazy"></figure><figure class="case-drawing"><img src="assets/project-drawings/yuanling-strategy-plan.jpg" alt="园岭共建策略图" loading="lazy"></figure></div><div class="case-footer"><div class="chips"><span class="chip">服务蓝图</span><span class="chip">任务流</span><span class="chip">运营指标</span></div><span class="arrow">↗</span></div></article>
+          <article class="case reveal" style="--cover:url('assets/project-covers/aipin-board.jpg')"><span class="project-index">03 · AIPIN COPILOT</span><h3>爱拼公寓<br>共创助手</h3><p>将访谈、现场资料与协作记录转成可追溯的证据卡片；通过人群—场景—任务—痛点结构，辅助方案对比、共创沟通和交付检查。</p><div class="case-drawings" aria-label="爱拼公寓项目图纸"><figure class="case-drawing"><img src="assets/project-drawings/aipin-resident-insight.jpg" alt="爱拼公寓用户洞察图" loading="lazy"></figure><figure class="case-drawing"><img src="assets/project-drawings/aipin-layout-plan.jpg" alt="爱拼公寓户型方案图" loading="lazy"></figure></div><div class="case-footer"><div class="chips"><span class="chip">RAG + 规则</span><span class="chip">人工复核</span><span class="chip">可追溯性</span></div><span class="arrow">↗</span></div></article>
+          <article class="case reveal" style="--cover:url('assets/project-covers/yilaoju-board.jpg')"><span class="project-index">04 · YILAOJU</span><h3>怡老居<br>焕新管家</h3><p>围绕长者与家人的日常使用，规划“初始评估—共同决策—轻量调整—持续支持”的产品闭环；涉及专业判断的环节始终保留人工核验。</p><div class="case-drawings" aria-label="怡老居项目图纸"><figure class="case-drawing"><img src="assets/project-drawings/yilaoju-personas.png" alt="怡老居用户画像图" loading="lazy"></figure><figure class="case-drawing"><img src="assets/project-drawings/yilaoju-flow-plan.png" alt="怡老居居住动线图" loading="lazy"></figure></div><div class="case-footer"><div class="chips"><span class="chip">家庭共识</span><span class="chip">交付看板</span><span class="chip">使用指引</span></div><span class="arrow">↗</span></div></article>
         </div>
       </div>
     </section>
