@@ -137,13 +137,8 @@
     .modal-media-head, .modal-gallery-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 10px; }
     .modal-media-head p, .modal-gallery-head p { margin: 0; font-size: 11px; color: var(--cyan); }
     .modal-media-head span, .modal-gallery-head span { color: #9facc1; font-size: 10px; }
-    .modal-video-launch { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 16px; min-height: 94px; padding: 18px 20px; border: 1px solid rgba(114,228,255,.52); background: linear-gradient(108deg, rgba(11,39,69,.94), rgba(5,10,18,.97)); color: var(--ink); text-decoration: none; transition: border-color .2s, transform .2s, background .2s; }
-    .modal-video-launch:hover { border-color: var(--cyan); background: linear-gradient(108deg, rgba(12,55,92,.98), rgba(5,10,18,.98)); transform: translateY(-2px); }
-    .modal-video-launch:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
-    .modal-video-play { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid var(--cyan); border-radius: 50%; color: var(--cyan); font-size: 16px; }
-    .modal-video-launch strong { display: block; font-size: 17px; letter-spacing: -.03em; }
-    .modal-video-launch small { display: block; margin-top: 5px; color: #aebbd0; font-size: 11px; line-height: 1.45; }
-    .modal-video-arrow { color: var(--cyan); font-size: 22px; }
+    .modal-video-frame { border: 1px solid rgba(114,228,255,.52); background: #02050b; aspect-ratio: 16 / 9; overflow: hidden; }
+    .modal-video-frame video { display: block; width: 100%; height: 100%; object-fit: contain; background: #02050b; }
     .modal-case-gallery { margin-top: 30px; }
     .modal-gallery-block { border-top: 1px solid var(--line); padding-top: 22px; margin-top: 28px; }
     .modal-gallery-block:first-child { margin-top: 0; }
@@ -181,8 +176,6 @@
       .modal-list li { font-size: 13px; }
       .modal-project-media { margin-bottom: 22px; }
       .modal-media-head, .modal-gallery-head { align-items: flex-start; flex-direction: column; gap: 4px; }
-      .modal-video-launch { grid-template-columns: auto 1fr; gap: 12px; min-height: 84px; padding: 15px; }
-      .modal-video-arrow { display: none; }
       .modal-gallery-grid { grid-template-columns: 1fr; gap: 10px; }
       .modal-gallery-block--details .modal-gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
       .modal-gallery-card figcaption { padding: 9px 10px; }
@@ -336,7 +329,7 @@
         }
         const gallery = (title, kicker, items, modifier = '') => `<section class="modal-gallery-block ${modifier ? `modal-gallery-block--${modifier}` : ''}"><div class="modal-gallery-head"><div><p class="mono">${kicker}</p><h4>${title}</h4></div><span class="mono">点击查看大图 ↗</span></div><div class="modal-gallery-grid">${items.map(([src,label])=>`<figure class="modal-gallery-card"><a href="${src}" target="_blank" rel="noreferrer" aria-label="查看${label}大图"><img src="${src}" alt="${label}" loading="lazy" decoding="async"></a><figcaption><span>${label}</span><span aria-hidden="true">↗</span></figcaption></figure>`).join('')}</div></section>`;
         modalProjectMedia.hidden = false;
-        modalProjectMedia.innerHTML = `<div class="modal-media-head"><p class="mono">PROJECT FILM / 01</p><span class="mono">${media.video.meta}</span></div><a class="modal-video-launch" href="${media.video.src}" target="_blank" rel="noreferrer" aria-label="在新窗口打开爱拼公寓高清项目影片"><span class="modal-video-play" aria-hidden="true">▶</span><span><strong>打开高清项目影片</strong><small>原始 MP4 · 新窗口播放，不在页面内预加载</small></span><span class="modal-video-arrow" aria-hidden="true">↗</span></a>`;
+        modalProjectMedia.innerHTML = `<div class="modal-media-head"><p class="mono">PROJECT FILM / 01</p><span class="mono">高清原片 · H.264</span></div><div class="modal-video-frame"><video controls playsinline preload="none" poster="${media.video.poster}" aria-label="爱拼公寓项目影片"><source src="${media.video.src}" type="video/mp4">你的浏览器暂不支持视频播放。</video></div>`;
         modalCaseGallery.hidden = false;
         modalCaseGallery.innerHTML = gallery('细节详图', 'DETAIL DRAWINGS / 02', media.details, 'details') + gallery('最终展板', 'FINAL BOARDS / 03', media.boards);
       };
