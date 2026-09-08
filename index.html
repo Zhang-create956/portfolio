@@ -137,7 +137,7 @@
     .modal-media-head, .modal-gallery-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 10px; }
     .modal-media-head p, .modal-gallery-head p { margin: 0; font-size: 11px; color: var(--cyan); }
     .modal-media-head span, .modal-gallery-head span { color: #9facc1; font-size: 10px; }
-    .modal-video-frame { border: 1px solid rgba(114,228,255,.52); background: #02050b; aspect-ratio: 16 / 9; overflow: hidden; }
+    .modal-video-frame { width: min(69%, 960px); border: 1px solid rgba(114,228,255,.52); background: #02050b; aspect-ratio: 8 / 5; overflow: hidden; }
     .modal-video-frame video { display: block; width: 100%; height: 100%; object-fit: contain; background: #02050b; }
     .modal-case-gallery { margin-top: 30px; }
     .modal-gallery-block { border-top: 1px solid var(--line); padding-top: 22px; margin-top: 28px; }
@@ -176,6 +176,7 @@
       .modal-list li { font-size: 13px; }
       .modal-project-media { margin-bottom: 22px; }
       .modal-media-head, .modal-gallery-head { align-items: flex-start; flex-direction: column; gap: 4px; }
+      .modal-video-frame { width: 100%; max-width: none; aspect-ratio: 16 / 9; }
       .modal-gallery-grid { grid-template-columns: 1fr; gap: 10px; }
       .modal-gallery-block--details .modal-gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
       .modal-gallery-card figcaption { padding: 9px 10px; }
